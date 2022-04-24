@@ -20,7 +20,7 @@ def jira_datasets():
 
 
 class JiraResource(BaseResource):
-    
+
     def __init__(self, resource_file='locustio/jira/resources.json'):
         super().__init__(resource_file)
 

@@ -6,7 +6,7 @@ import json
 
 from selenium_ui.base_page import BasePage
 from selenium_ui.jira.pages.selectors import UrlManager, LoginPageLocators, DashboardLocators, PopupLocators, \
-    IssueLocators, ProjectLocators, SearchLocators, BoardsListLocators, BoardLocators, LogoutLocators
+    IssueLocators, QuickCreateLocators, ProjectLocators, SearchLocators, BoardsListLocators, BoardLocators, LogoutLocators
 
 
 class PopupManager(BasePage):
@@ -75,6 +75,18 @@ class Dashboard(BasePage):
     def wait_dashboard_presented(self):
         self.wait_until_present(DashboardLocators.dashboard_window)
 
+class QuickCreate(BasePage):
+    page_loaded_selector = QuickCreateLocators.quick_create_button
+
+    def __init__(self, driver):
+        BasePage.__init__(self, driver)
+
+    def quick_create_interaction(self):
+        self.wait_until_visible(QuickCreateLocators.quick_create_button).click()
+        self.wait_until_visible(QuickCreateLocators.category1).click()
+        self.wait_until_visible(QuickCreateLocators.item1).click()
+        self.wait_until_visible(QuickCreateLocators.resolution_drop_down).send_keys("Resolution 10000\n")
+        self.wait_until_visible(QuickCreateLocators.create_button).click()
 
 class Issue(BasePage):
     page_loaded_selector = IssueLocators.issue_title
