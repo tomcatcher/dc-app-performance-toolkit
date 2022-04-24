@@ -96,8 +96,8 @@ class DashboardLocators:
 class QuickCreateLocators:
 
     quick_create_button = (By.ID, "quick-create-button-link")
-    category1 = (By.XPATH, "/html/body/div[7]/div/div/div/div[2]/div/div[2]/div/div/ul/li/div/a/img")
-    item1 = (By.XPATH, "/html/body/div[7]/div/div/div/div[2]/div/div[2]/div/div/ul/li/div/a/img")
+    category1 = (By.CLASS, "qc-overlay__3Yii7WSiOUSqVL-byS5kj9")
+    item1 = (By.CLASS, "qc-overlay__3Yii7WSiOUSqVL-byS5kj9")
     resolution_drop_down = (By.ID, "resolution")
     create_button = (By.ID, "create-issue-submit")
 
