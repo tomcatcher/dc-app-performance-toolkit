@@ -119,14 +119,16 @@ def create_issue(webdriver, dataset):
     measure()
     PopupManager(webdriver).dismiss_default_popup()
 
- def quick_create(webdriver, dataset):
+
+def quick_create(webdriver, dataset):
     quick_create_modal = QuickCreate(webdriver)
-    quick_create_model.quick_create_interaction(self)
+    quick_create_modal.quick_create_interaction()
 
-    @print_timing("selenium_quick_create")
-    def measure():
+#    @print_timing("selenium_quick_create")
 
-        @print_timing("selenium_quick_create")
+#    def measure():
+
+#        @print_timing("selenium_quick_create")
 #        def sub_measure():
 #            issue_modal.open_create_issue_modal()
 #        sub_measure()
@@ -144,7 +146,7 @@ def create_issue(webdriver, dataset):
 #                issue_modal.submit_issue()
 #            sub_sub_measure()
 #        sub_measure()
-    measure()
+#    measure()
     PopupManager(webdriver).dismiss_default_popup()
 
 
