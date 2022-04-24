@@ -10,6 +10,7 @@
       "selenium_create_issue:fill_and_submit_issue_form:submit_issue_form",
       "selenium_create_issue:fill_and_submit_issue_form",
       "selenium_create_issue",
+      "selenium_quick_create",
       "selenium_edit_issue:open_edit_issue_form",
       "selenium_edit_issue:save_edit_issue_form",
       "selenium_edit_issue",

@@ -2,7 +2,7 @@ import random
 import urllib.parse
 
 from selenium_ui.conftest import print_timing
-from selenium_ui.jira.pages.pages import Login, PopupManager, Issue, Project, Search, ProjectsList, \
+from selenium_ui.jira.pages.pages import Login, PopupManager, Issue, QuickCreate, Project, Search, ProjectsList, \
     BoardsList, Board, Dashboard, Logout
 
 from util.api.jira_clients import JiraRestClient
@@ -116,6 +116,34 @@ def create_issue(webdriver, dataset):
                 issue_modal.submit_issue()
             sub_sub_measure()
         sub_measure()
+    measure()
+    PopupManager(webdriver).dismiss_default_popup()
+
+ def quick_create(webdriver, dataset):
+    quick_create_modal = QuickCreate(webdriver)
+    quick_create_model.quick_create_interaction(self)
+
+    @print_timing("selenium_quick_create")
+    def measure():
+
+        @print_timing("selenium_quick_create")
+#        def sub_measure():
+#            issue_modal.open_create_issue_modal()
+#        sub_measure()
+#
+#        @print_timing("selenium_create_issue:fill_and_submit_issue_form")
+#        def sub_measure():
+#            issue_modal.fill_summary_create()  # Fill summary field
+#            issue_modal.fill_description_create(rte_status)  # Fill description field
+#            issue_modal.assign_to_me()  # Click assign to me
+#            issue_modal.set_resolution()  # Set resolution if there is such field
+#            issue_modal.set_issue_type()  # Set issue type, use non epic type
+#
+#            @print_timing("selenium_create_issue:fill_and_submit_issue_form:submit_issue_form")
+#            def sub_sub_measure():
+#                issue_modal.submit_issue()
+#            sub_sub_measure()
+#        sub_measure()
     measure()
     PopupManager(webdriver).dismiss_default_popup()
 

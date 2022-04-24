@@ -93,6 +93,13 @@ class DashboardLocators:
     dashboard_params = UrlManager().dashboard_params
     dashboard_window = (By.CLASS_NAME, "page-type-dashboard")
 
+class QuickCreateLocators:
+
+    quick_create_button = (By.ID, "quick-create-button-link")
+    category1 = (By.XPATH, "/html/body/div[9]/div/div/div/div[2]/div/div[2]/div/div/ul/li/div/a/img")
+    item1 = (By.XPATH, "/html/body/div[9]/div/div/div/div[2]/div/div[2]/div/div/ul/li/div/a/img")
+    resolution_drop_down = (By.ID, "resolution")
+    create_button = (By.ID, "create-issue-submit")
 
 class IssueLocators:
 

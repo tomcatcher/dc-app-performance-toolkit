@@ -19,6 +19,10 @@ def test_1_selenium_create_issue(jira_webdriver, jira_datasets, jira_screen_shot
     modules.create_issue(jira_webdriver, jira_datasets)
 
 
+def test_1_selenium_quick_create(jira_webdriver, jira_datasets, jira_screen_shots):
+    modules.ixperta_quick_create(jira_webdriver, jira_datasets)
+
+
 def test_1_selenium_edit_issue(jira_webdriver, jira_datasets, jira_screen_shots):
     modules.edit_issue(jira_webdriver, jira_datasets)
 
