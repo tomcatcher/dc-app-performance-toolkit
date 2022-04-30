@@ -1,0 +1,191 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: forked-1.4.0, xdist-2.5.0, apiritif-1.0.0
+collected 15 items
+
+selenium_ui/jira_ui.py first driver inits
+1650780729538,493,selenium_login:open_login_page,Success,True
+node_id:SERVER
+1650780731469,1930,selenium_login:login_and_view_dashboard,Success,True
+1650780731469,2424,selenium_login,Success,True
+.test_0_selenium_a_login,Total:1 Passed:1 Failed:0
+1650780731747,243,selenium_browse_projects_list,Success,True
+.test_1_selenium_browse_projects_list,Total:2 Passed:2 Failed:0
+1650780732189,439,selenium_browse_boards_list,Success,True
+.test_1_selenium_browse_boards_list,Total:3 Passed:3 Failed:0
+1650780732802,598,selenium_create_issue:open_quick_create,Success,True
+1650780733881,588,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,Success,True
+1650780733881,1079,selenium_create_issue:fill_and_submit_issue_form,Success,True
+1650780733881,1677,selenium_create_issue,Success,True
+.test_1_selenium_create_issue,Total:4 Passed:4 Failed:0
+FAction: test_1_selenium_quick_create, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="ca31c83a5f13a79d35e49411845e4bb6")>
+jira_datasets = {'custom_issues': [], 'issue_id': '208500', 'issue_key': 'AAFAIA-2992', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_quick_create(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.quick_create(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:125: in quick_create
+    quick_create_modal.quick_create_interaction()
+selenium_ui/jira/pages/pages.py:86: in quick_create_interaction
+    self.wait_until_visible(QuickCreateLocators.category1).click()
+selenium_ui/base_page.py:63: in wait_until_visible
+    return self.__wait_until(expected_condition=ec.visibility_of_element_located(selector), time_out=timeout)
+selenium_ui/base_page.py:112: in __wait_until
+    return WebDriverWait(self.driver, time_out).until(expected_condition, message=message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="ca31c83a5f13a79d35e49411845e4bb6")>
+method = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7f7c3322ce50>
+message = "Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of...ct at 0x7f7c3322ce50>. \nLocator: ('xpath', '/html/body/div[7]/div/div/div/div[2]/div/div[2]/div/div/ul/li/div/a/img')"
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+        return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() > end_time:
+                break
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7f7c3322ce50>. 
+E       Locator: ('xpath', '/html/body/div[7]/div/div/div/div[2]/div/div[2]/div/div/ul/li/div/a/img')
+
+results/jira/2022-04-24_06-11-40/python-packages/3.9.5/selenium/webdriver/support/wait.py:80: TimeoutException
+
+test_1_selenium_quick_create,Total:5 Passed:4 Failed:1
+1650780755909,756,selenium_edit_issue:open_edit_issue_form,Success,True
+1650780757571,1086,selenium_edit_issue:save_edit_issue_form,Failed measure: selenium_edit_issue:save_edit_issue_form - ElementClickInterceptedException,False
+1650780757571,2418,selenium_edit_issue,Failed measure: selenium_edit_issue - Exception,False
+FAction: test_1_selenium_edit_issue, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="ca31c83a5f13a79d35e49411845e4bb6")>
+jira_datasets = {'custom_issues': [], 'issue_id': '208500', 'issue_key': 'AAFAIA-2992', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_edit_issue(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.edit_issue(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:182: in edit_issue
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_edit_issue - Exception', Exception('Failed measure: selenium_edit_issue:save_edit_issue_form - ElementClickInterceptedException', ElementClickInterceptedException('element click intercepted: Element <input accesskey="s" class="aui-button" id="issue-edit-submit" name="Update" title="Press Alt+s to submit this form" type="submit" value="Update" resolved=""> is not clickable at point (198, 1065). Other element would receive the click: <div class="-ixperta-atlassian-modal-dialog_screen__1C4Hi" style="z-index: 10000;"></div>\n  (Session info: headless chrome=97.0.4692.99)', None, None)))
+
+selenium_ui/conftest.py:155: Exception
+
+test_1_selenium_edit_issue,Total:6 Passed:4 Failed:2
+1650780758336,285,selenium_save_comment:open_comment_form,Success,True
+1650780759604,1084,selenium_save_comment:submit_form,Failed measure: selenium_save_comment:submit_form - ElementClickInterceptedException,False
+1650780759604,1553,selenium_save_comment,Failed measure: selenium_save_comment - Exception,False
+FAction: test_1_selenium_save_comment, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="ca31c83a5f13a79d35e49411845e4bb6")>
+jira_datasets = {'custom_issues': [], 'issue_id': '208500', 'issue_key': 'AAFAIA-2992', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_save_comment(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.save_comment(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:202: in save_comment
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_save_comment - Exception', Exception('Failed measure: selenium_save_comment:submit_form - ElementClickInterceptedException', ElementClickInterceptedException('element click intercepted: Element <input accesskey="s" class="aui-button" id="comment-add-submit" name="Add" title="Press Alt+s to submit this form" type="submit" value="Add" resolved=""> is not clickable at point (188, 467). Other element would receive the click: <div class="-ixperta-atlassian-modal-dialog_screen__1C4Hi" style="z-index: 10000;"></div>\n  (Session info: headless chrome=97.0.4692.99)', None, None)))
+
+selenium_ui/conftest.py:155: Exception
+
+test_1_selenium_save_comment,Total:7 Passed:4 Failed:3
+1650780761877,1833,selenium_search_jql,Success,True
+.test_1_selenium_search_jql,Total:8 Passed:5 Failed:3
+1650780762788,909,selenium_view_scrum_board_backlog,Success,True
+.test_1_selenium_view_backlog_for_scrum_board,Total:9 Passed:6 Failed:3
+1650780763667,877,selenium_view_scrum_board,Success,True
+.test_1_selenium_view_scrum_board,Total:10 Passed:7 Failed:3
+1650780764350,681,selenium_view_kanban_board,Success,True
+.test_1_selenium_view_kanban_board,Total:11 Passed:8 Failed:3
+1650780764838,487,selenium_view_dashboard,Success,True
+.test_1_selenium_view_dashboard,Total:12 Passed:9 Failed:3
+1650780765735,894,selenium_view_issue,Success,True
+.test_1_selenium_view_issue,Total:13 Passed:10 Failed:3
+1650780766110,373,selenium_project_summary,Success,True
+.test_1_selenium_view_project_summary,Total:14 Passed:11 Failed:3

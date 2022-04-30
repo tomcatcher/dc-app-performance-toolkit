@@ -1,0 +1,52 @@
+Summary run status                                                     FAIL
+               
+Artifacts dir                                                          2022-04-24_06-11-40 
+OS                                                                     Linux               
+DC Apps Performance Toolkit version                                    6.1.0 (OK: Toolkit is up to date)
+Application                                                            jira 8.20.4         
+Dataset info                                                           1055030 issues      
+Application nodes count                                                Server              
+Concurrency                                                            200                 
+Expected test run duration from yml file                               2700 sec            
+Actual test run duration                                               40 sec              
+Finished                                                               (False, 'Actual test duration 40 sec < than expected test_duration 2700 sec.')
+Compliant                                                              (False, 'Test run duration 40 sec < than minimum test duration 2700 sec.')
+Success                                                                (False, 'One or more actions have success rate < 95.0 %.')
+Has app-specific actions                                               False               
+
+Action                                                                Success Rate        90th Percentile     Status              
+jmeter_login_and_view_dashboard                                        100.0               0.32                OK                  
+jmeter_view_issue                                                      100.0               0.19                OK                  
+jmeter_search_jql                                                      100.0               0.51                OK                  
+jmeter_view_dashboard                                                  100.0               0.08                OK                  
+jmeter_view_scrum_board                                                100.0               0.13                OK                  
+jmeter_view_backlog                                                    100.0               0.32                OK                  
+jmeter_create_issue:open_quick_create                                  100.0               0.06                OK                  
+jmeter_create_issue:fill_and_submit_issue_form                         100.0               0.24                OK                  
+jmeter_view_kanban_board                                               100.0               0.17                OK                  
+jmeter_browse_projects                                                 100.0               0.05                OK                  
+jmeter_edit_issue:open_editor                                          100.0               0.1                 OK                  
+jmeter_edit_issue:save_edit                                            100.0               0.21                OK                  
+jmeter_view_project_summary                                            100.0               0.1                 OK                  
+selenium_login:open_login_page                                         100.0               0.49                OK                  
+selenium_login:login_and_view_dashboard                                100.0               1.93                OK                  
+selenium_login                                                         100.0               2.42                OK                  
+selenium_browse_projects_list                                          100.0               0.24                OK                  
+selenium_browse_boards_list                                            100.0               0.44                OK                  
+selenium_create_issue:open_quick_create                                100.0               0.6                 OK                  
+selenium_create_issue:fill_and_submit_issue_form:submit_issue_form     100.0               0.59                OK                  
+selenium_create_issue:fill_and_submit_issue_form                       100.0               1.08                OK                  
+selenium_create_issue                                                  100.0               1.68                OK                  
+selenium_edit_issue:open_edit_issue_form                               100.0               0.76                OK                  
+selenium_edit_issue:save_edit_issue_form                               0.0                 1.09                Fail                
+selenium_edit_issue                                                    0.0                 2.42                Fail                
+selenium_save_comment:open_comment_form                                100.0               0.28                OK                  
+selenium_save_comment:submit_form                                      0.0                 1.08                Fail                
+selenium_save_comment                                                  0.0                 1.55                Fail                
+selenium_search_jql                                                    100.0               1.83                OK                  
+selenium_view_scrum_board_backlog                                      100.0               0.91                OK                  
+selenium_view_scrum_board                                              100.0               0.88                OK                  
+selenium_view_kanban_board                                             100.0               0.68                OK                  
+selenium_view_dashboard                                                100.0               0.49                OK                  
+selenium_view_issue                                                    100.0               0.89                OK                  
+selenium_project_summary                                               100.0               0.37                OK                  

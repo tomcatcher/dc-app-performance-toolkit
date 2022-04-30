@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/bzt/resources/pytest_runner.py", line 196, in <module>
+    run_pytest(args, opts.report_file, int(opts.iterations), float(opts.duration))
+  File "/usr/local/lib/python3.9/dist-packages/bzt/resources/pytest_runner.py", line 165, in run_pytest
+    raise ValueError("Nothing to test. No tests were found.")
+ValueError: Nothing to test. No tests were found.

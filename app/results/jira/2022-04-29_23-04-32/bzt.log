@@ -1,0 +1,307 @@
+[2022-04-29 23:04:32,202 INFO root] Taurus CLI Tool v1.16.2
+[2022-04-29 23:04:32,203 DEBUG root] Build: 14244 Sun Dec 19 07:38:07 UTC 2021
+[2022-04-29 23:04:32,203 DEBUG root] Extended git info:  2a4277d2 Release 1.16.2
+[2022-04-29 23:04:32,203 DEBUG root] Command-line options: {'log': '/tmp/bzt_mgf7o_sr.log', 'option': ['modules.console.disable=true'], 'quiet': None, 'verbose': None, 'no_system_configs': None, 'aliases': []}
+[2022-04-29 23:04:32,203 DEBUG root] Python: CPython 3.9.5
+[2022-04-29 23:04:32,203 DEBUG root] OS: uname_result(system='Linux', node='149204f1bd24', release='5.13.0-1022-aws', version='#24~20.04.1-Ubuntu SMP Thu Apr 7 22:10:15 UTC 2022', machine='x86_64')
+[2022-04-29 23:04:32,203 DEBUG root] Path to interpreter: /usr/bin/python3
+[2022-04-29 23:04:32,203 DEBUG root] Path to packages: ['/usr/local/bin', '/usr/lib/python39.zip', '/usr/lib/python3.9', '/usr/lib/python3.9/lib-dynload', '/usr/local/lib/python3.9/dist-packages', '/usr/lib/python3/dist-packages']
+[2022-04-29 23:04:32,206 DEBUG root] Default python: /usr/bin/python
+[2022-04-29 23:04:32,206 DEBUG root] Default python3: /usr/bin/python3
+[2022-04-29 23:04:32,206 DEBUG root] Using personal config: /root/.bzt-rc
+[2022-04-29 23:04:32,206 INFO root] Starting with configs: ['/root/.bzt-rc', 'jira.yml']
+[2022-04-29 23:04:32,206 INFO Engine] Configuring...
+[2022-04-29 23:04:32,206 DEBUG Engine] Reading system configs from: /etc/bzt.d
+[2022-04-29 23:04:32,253 DEBUG Engine] Base configs list: ['/usr/local/lib/python3.9/dist-packages/bzt/resources/10-base-config.yml', '/etc/bzt.d/90-artifacts-dir.json', '/etc/bzt.d/99-zinstallID.json']
+[2022-04-29 23:04:32,253 DEBUG Engine.Configuration] Configs: ['/usr/local/lib/python3.9/dist-packages/bzt/resources/10-base-config.yml', '/etc/bzt.d/90-artifacts-dir.json', '/etc/bzt.d/99-zinstallID.json']
+[2022-04-29 23:04:32,254 DEBUG Engine.Configuration] Reading /usr/local/lib/python3.9/dist-packages/bzt/resources/10-base-config.yml as YAML
+[2022-04-29 23:04:32,269 DEBUG Engine.Configuration] Reading /etc/bzt.d/90-artifacts-dir.json as YAML
+[2022-04-29 23:04:32,269 DEBUG Engine.Configuration] Reading /etc/bzt.d/99-zinstallID.json as YAML
+[2022-04-29 23:04:32,269 DEBUG Engine] User configs list: ['/root/.bzt-rc', 'jira.yml']
+[2022-04-29 23:04:32,270 DEBUG Engine.Configuration] Configs: ['/root/.bzt-rc', 'jira.yml']
+[2022-04-29 23:04:32,270 DEBUG Engine.Configuration] Reading /root/.bzt-rc as YAML
+[2022-04-29 23:04:32,273 DEBUG Engine.Configuration] Reading jira.yml as YAML
+[2022-04-29 23:04:32,283 DEBUG Engine.Configuration] Configs: ['/root/.bzt-rc', 'jira.yml']
+[2022-04-29 23:04:32,283 DEBUG Engine.Configuration] Reading /root/.bzt-rc as YAML
+[2022-04-29 23:04:32,285 DEBUG Engine.Configuration] Reading jira.yml as YAML
+[2022-04-29 23:04:32,306 DEBUG Engine] Requesting updates info: https://gettaurus.org/updates/?version=1.16.2&installID=Docker
+[2022-04-29 23:04:32,306 DEBUG ConfigOverrider] Applying modules.console.disable=true
+[2022-04-29 23:04:32,306 DEBUG HTTPClient] Making HTTP request GET https://gettaurus.org/updates/?version=1.16.2&installID=Docker
+[2022-04-29 23:04:32,306 DEBUG ConfigOverrider] Applying: [disable]=true
+[2022-04-29 23:04:32,306 DEBUG ConfigOverrider] Parsed override value: 'true' -> True (<class 'bool'>)
+[2022-04-29 23:04:32,306 INFO Engine] Artifacts dir: /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32
+[2022-04-29 23:04:32,307 DEBUG Engine] New artifact filename: /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/effective
+[2022-04-29 23:04:32,308 DEBUG Engine.Configuration] Dumping YAML config into /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/effective.yml
+[2022-04-29 23:04:32,322 DEBUG urllib3.connectionpool] Starting new HTTPS connection (1): gettaurus.org:443
+[2022-04-29 23:04:32,323 DEBUG Engine.Configuration] Dumping JSON config into /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/effective.json
+[2022-04-29 23:04:32,323 DEBUG Engine] New artifact filename: /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/merged.yml
+[2022-04-29 23:04:32,324 DEBUG Engine.Configuration] Dumping YAML config into /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/merged.yml
+[2022-04-29 23:04:32,329 DEBUG Engine] New artifact filename: /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/merged.json
+[2022-04-29 23:04:32,330 DEBUG Engine.Configuration] Dumping JSON config into /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/merged.json
+[2022-04-29 23:04:32,330 DEBUG Engine] Add existing artifact (move=False): /root/.bzt-rc
+[2022-04-29 23:04:32,330 DEBUG Engine] Copying /root/.bzt-rc to /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/.bzt-rc
+[2022-04-29 23:04:32,330 DEBUG Engine] Add existing artifact (move=False): jira.yml
+[2022-04-29 23:04:32,330 DEBUG Engine] Copying jira.yml to /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/jira.yml
+[2022-04-29 23:04:32,330 DEBUG Engine] Set PYTHONPATH to :
+	USER: '/dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/python-packages/3.9.5' +
+	TEMP: '/root/.bzt/python-packages/3.9.5' +
+	CURRENT: ''
+[2022-04-29 23:04:32,333 DEBUG Engine] Content of user packages dir: ['certifi-2021.10.8.dist-info', 'outcome', 'cffi-1.15.0.dist-info', 'attr', 'outcome-1.1.0.dist-info', 'setuptools', 'MarkupSafe-2.0.1.dist-info', 'six.py', 'toml', 'locust-2.5.1.dist-info', 'Jinja2-3.0.3.dist-info', 'py-1.11.0.dist-info', 'pycparser', 'sortedcontainers', 'man', 'gevent-21.12.0.dist-info', 'trio', 'msgpack', 'xdist', 'async_generator', 'pytest-6.2.5.dist-info', 'greenlet-1.1.2.dist-info', 'pluggy', 'nose-1.3.7.dist-info', 'pytest_forked', 'msgpack-1.0.3.dist-info', 'wsproto-1.0.0.dist-info', 'jsonpath_ng-1.5.3.dist-info', 'packaging-21.3.dist-info', 'typing_extensions-4.0.1.dist-info', 'pyzmq.libs', 'zope.interface-5.4.0.dist-info', 'typing_extensions.py', 'flask', 'charset_normalizer-2.0.9.dist-info', 'robot', 'chardet-4.0.0.dist-info', '_cffi_backend.cpython-39-x86_64-linux-gnu.so', 'itsdangerous-2.0.1.dist-info', 'zope.event-4.5.0.dist-info', 'charset_normalizer', 'pluggy-1.0.0.dist-info', 'sniffio-1.2.0.dist-info', 'pytest_forked-1.4.0.dist-info', 'h11', 'packaging', 'ply-3.11.dist-info', 'psutil', 'locust', 'cffi.libs', 'six-1.16.0.dist-info', 'click-8.0.3.dist-info', '_brotli.cpython-39-x86_64-linux-gnu.so', 'decorator.py', 'Werkzeug-2.0.2.dist-info', 'pycparser-2.21.dist-info', 'urllib3-1.26.7.dist-info', 'include', 'distutils-precedence.pth', 'psutil-5.8.0.dist-info', 'cryptography', '_distutils_hack', 'trio-0.19.0.dist-info', 'iniconfig', 'itsdangerous', 'roundrobin-0.0.2.dist-info', 'markupsafe', 'unicodecsv-0.14.1.dist-info', 'trio_websocket', 'Brotli-1.0.9.dist-info', 'pytest', 'cssselect-1.1.0.dist-info', 'cryptography-36.0.1.dist-info', 'decorator-5.1.0.dist-info', 'ply', 'idna-3.3.dist-info', 'geventhttpclient-1.5.3.dist-info', 'pyOpenSSL-21.0.0.dist-info', 'urllib3', 'wsproto', 'pytest_xdist-2.5.0.dist-info', 'py', 'configargparse.py', 'trio_websocket-0.9.2.dist-info', 'roundrobin', 'werkzeug', 'zope', 'zope.interface-5.4.0-py3.9-nspkg.pth', 'robotframework_seleniumlibrary-5.1.3.dist-info', 'pyparsing', 'cffi', 'certifi', 'click', 'gevent', 'idna', 'iniconfig-1.1.1.dist-info', 'nose', 'flask_basicauth.py', 'flask_cors', 'SeleniumLibrary', 'execnet', 'toml-0.10.2.dist-info', 'zope.event-4.5.0-py3.6-nspkg.pth', 'jinja2', 'apiritif', 'robotframework-4.1.3.dist-info', 'robotlibcore.py', 'cssselect', 'h11-0.12.0.dist-info', 'ConfigArgParse-1.5.3.dist-info', 'requests-2.26.0.dist-info', 'lxml', 'pyzmq-22.3.0.dist-info', 'greenlet', '__pycache__', 'selenium', 'execnet-1.9.0.dist-info', 'geventhttpclient', 'pyparsing-3.0.6.dist-info', 'sniffio', 'requests', 'robotframework_pythonlibcore-3.0.0.dist-info', 'lxml-4.7.1.dist-info', 'unicodecsv', 'Flask-2.0.2.dist-info', 'bin', 'Flask_BasicAuth-0.2.0.dist-info', 'attrs-21.2.0.dist-info', 'OpenSSL', 'jsonpath_ng', 'Flask_Cors-3.0.10.dist-info', 'brotli.py', 'apiritif-1.0.0.dist-info', 'sortedcontainers-2.4.0.dist-info', 'async_generator-1.10.dist-info', 'selenium-4.1.0.dist-info', 'zmq', '_pytest', 'pkg_resources', 'chardet', 'setuptools-59.7.0.dist-info']
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: application_hostname=ptjira.ixpertainfra.cz
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: application_protocol=http
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: application_port=8080
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: secure=False
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: admin_login=admin
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: admin_password=ptjira1234
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: load_executor=jmeter
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: concurrency=200
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: test_duration=45m
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: ramp-up=3m
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: total_actions_per_hour=54500
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: WEBDRIVER_VISIBLE=False
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: JMETER_VERSION=5.4.2
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: LANGUAGE=English (United States) [Default]
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: allow_analytics=True
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: create_issue=4
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: search_jql=11
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: view_issue=34
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: view_project_summary=3
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: view_dashboard=10
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: edit_issue=5
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: add_comment=2
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: browse_projects=9
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: view_scrum_board=8
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: view_kanban_board=7
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: view_backlog=6
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: browse_boards=1
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: standalone_extension=0
+[2022-04-29 23:04:32,334 DEBUG Engine] OS env: TAURUS_ARTIFACTS_DIR=/dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32
+[2022-04-29 23:04:32,334 DEBUG root] Closing log handler: /tmp/bzt_mgf7o_sr.log
+[2022-04-29 23:04:32,335 DEBUG root] Switched writing logs to /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/bzt.log
+[2022-04-29 23:04:32,335 DEBUG root] Linting config
+[2022-04-29 23:04:32,337 INFO Engine] Preparing...
+[2022-04-29 23:04:32,337 DEBUG Engine] Module config: consolidator {'class': 'bzt.modules.aggregator.ConsolidatingAggregator', 'rtimes-len': 0, 'percentiles': []}
+[2022-04-29 23:04:32,337 DEBUG root] Importing module: bzt.modules.aggregator
+[2022-04-29 23:04:32,480 DEBUG HTTPClient] Request resulted in exception: Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/connection.py", line 416, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='gettaurus.org', port=443): Max retries exceeded with url: /updates/?version=1.16.2&installID=Docker (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/bzt/utils.py", line 1238, in request
+    return self.session.request(method, url, *args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='gettaurus.org', port=443): Max retries exceeded with url: /updates/?version=1.16.2&installID=Docker (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)')))
+
+[2022-04-29 23:04:32,481 DEBUG Engine] Failed to check for updates: Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/connection.py", line 416, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/dist-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='gettaurus.org', port=443): Max retries exceeded with url: /updates/?version=1.16.2&installID=Docker (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/bzt/utils.py", line 1238, in request
+    return self.session.request(method, url, *args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='gettaurus.org', port=443): Max retries exceeded with url: /updates/?version=1.16.2&installID=Docker (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/bzt/engine/engine.py", line 728, in _check_updates
+    response = client.request('GET', addr, timeout=10)
+  File "/usr/local/lib/python3.9/dist-packages/bzt/utils.py", line 1245, in request
+    raise TaurusNetworkError(msg)
+bzt.TaurusNetworkError: Request to https://gettaurus.org/updates/?version=1.16.2&installID=Docker failed
+
+[2022-04-29 23:04:32,481 WARNING Engine] Failed to check for updates
+[2022-04-29 23:04:32,592 DEBUG root] Loading class: 'ConsolidatingAggregator' from <module 'bzt.modules.aggregator' from '/usr/local/lib/python3.9/dist-packages/bzt/modules/aggregator.py'>
+[2022-04-29 23:04:32,592 DEBUG Engine.consolidator] Buffer scaling setup: percentile None from [] selected
+[2022-04-29 23:04:32,592 DEBUG Engine] Module config: monitoring {'class': 'bzt.modules.monitoring.Monitoring'}
+[2022-04-29 23:04:32,592 DEBUG root] Importing module: bzt.modules.monitoring
+[2022-04-29 23:04:32,595 DEBUG root] Loading class: 'Monitoring' from <module 'bzt.modules.monitoring' from '/usr/local/lib/python3.9/dist-packages/bzt/modules/monitoring.py'>
+[2022-04-29 23:04:32,595 DEBUG Engine] Module config: shellexec {'class': 'bzt.modules.shellexec.ShellExecutor'}
+[2022-04-29 23:04:32,596 DEBUG root] Importing module: bzt.modules.shellexec
+[2022-04-29 23:04:32,596 DEBUG root] Loading class: 'ShellExecutor' from <module 'bzt.modules.shellexec' from '/usr/local/lib/python3.9/dist-packages/bzt/modules/shellexec.py'>
+[2022-04-29 23:04:32,596 DEBUG Engine] Module config: pip-install {'class': 'bzt.modules.services.PipInstaller'}
+[2022-04-29 23:04:32,596 DEBUG root] Importing module: bzt.modules.services
+[2022-04-29 23:04:32,604 DEBUG easyprocess] version=0.3
+[2022-04-29 23:04:32,607 DEBUG pyvirtualdisplay] version=2.2
+[2022-04-29 23:04:32,638 DEBUG root] Loading class: 'PipInstaller' from <module 'bzt.modules.services' from '/usr/local/lib/python3.9/dist-packages/bzt/modules/services.py'>
+[2022-04-29 23:04:32,638 DEBUG Engine.shellexec] Added prepare task: {'command': 'python util/pre_run/environment_checker.py'}
+[2022-04-29 23:04:32,638 DEBUG Engine.shellexec] Added prepare task: {'command': 'python util/pre_run/check_for_updates.py'}
+[2022-04-29 23:04:32,638 DEBUG Engine.shellexec] Added prepare task: {'command': 'python util/data_preparation/jira_prepare_data.py'}
+[2022-04-29 23:04:32,638 DEBUG Engine.shellexec] Added shutdown task: {'command': 'python util/post_run/jmeter_post_check.py'}
+[2022-04-29 23:04:32,638 DEBUG Engine.shellexec] Added shutdown task: {'command': 'python util/jtl_convertor/jtls-to-csv.py kpi.jtl selenium.jtl'}
+[2022-04-29 23:04:32,639 DEBUG Engine.shellexec] Added post-process task: {'command': 'python util/analytics/analytics.py jira'}
+[2022-04-29 23:04:32,639 DEBUG Engine.shellexec] Added post-process task: {'command': 'python util/post_run/cleanup_results_dir.py'}
+[2022-04-29 23:04:32,639 INFO Engine.shellexec.Task] Starting shell command: python util/pre_run/environment_checker.py
+[2022-04-29 23:04:32,639 DEBUG root] Executing shell: python util/pre_run/environment_checker.py at /dc-app-performance-toolkit/app
+[2022-04-29 23:04:32,745 DEBUG Engine.shellexec.Task] Output for python util/pre_run/environment_checker.py:
+Python version: 3.9.5
+Data Center App Performance Toolkit version: 6.1.0
+
+[2022-04-29 23:04:32,745 DEBUG Engine.shellexec.Task] Task was finished with exit code 0: python util/pre_run/environment_checker.py
+[2022-04-29 23:04:32,745 INFO Engine.shellexec.Task] Starting shell command: python util/pre_run/check_for_updates.py
+[2022-04-29 23:04:32,745 DEBUG root] Executing shell: python util/pre_run/check_for_updates.py at /dc-app-performance-toolkit/app
+[2022-04-29 23:04:33,097 DEBUG Engine.shellexec.Task] Output for python util/pre_run/check_for_updates.py:
+Info: DCAPT version 6.1.0 is the latest.
+
+[2022-04-29 23:04:33,097 DEBUG Engine.shellexec.Task] Task was finished with exit code 0: python util/pre_run/check_for_updates.py
+[2022-04-29 23:04:33,097 INFO Engine.shellexec.Task] Starting shell command: python util/data_preparation/jira_prepare_data.py
+[2022-04-29 23:04:33,097 DEBUG root] Executing shell: python util/data_preparation/jira_prepare_data.py at /dc-app-performance-toolkit/app
+[2022-04-29 23:04:38,336 DEBUG Engine.shellexec.Task] Output for python util/data_preparation/jira_prepare_data.py:
+Started preparing data
+Server url:  http://ptjira.ixpertainfra.cz:8080
+
+[2022-04-29 23:04:38,337 WARNING Engine.shellexec.Task] Errors for python util/data_preparation/jira_prepare_data.py:
+Traceback (most recent call last):
+  File "/dc-app-performance-toolkit/app/util/data_preparation/jira_prepare_data.py", line 191, in <module>
+    main()
+  File "/dc-app-performance-toolkit/app/util/data_preparation/jira_prepare_data.py", line 184, in main
+    dataset = __create_data_set(client)
+  File "/dc-app-performance-toolkit/app/util/data_preparation/jira_prepare_data.py", line 94, in __create_data_set
+    dataset[SCRUM_BOARDS] = __get_boards(perf_user_api, 'scrum')
+  File "/dc-app-performance-toolkit/app/util/data_preparation/jira_prepare_data.py", line 133, in __get_boards
+    boards = jira_api.get_boards(board_type=board_type, max_results=250)
+  File "/dc-app-performance-toolkit/app/util/api/jira_clients.py", line 40, in get_boards
+    response = self.get(api_url, "Could not retrieve boards")
+  File "/dc-app-performance-toolkit/app/util/api/abstract_clients.py", line 77, in get
+    self.__verify_response(response, error_msg, expected_status_codes)
+  File "/dc-app-performance-toolkit/app/util/api/abstract_clients.py", line 126, in __verify_response
+    raise Exception(f"The URL or content are not found for {response.url}. "
+Exception: The URL or content are not found for http://ptjira.ixpertainfra.cz:8080/rest/agile/1.0/board?startAt=0&maxResults=250&type=scrum. Please check environment variables in config.yml file (application_hostname, application_port, application_protocol, application_postfix).
+
+[2022-04-29 23:04:38,337 DEBUG Engine.shellexec.Task] Task was finished with exit code 1: python util/data_preparation/jira_prepare_data.py
+[2022-04-29 23:04:38,339 ERROR root] CalledProcessError: Command 'python util/data_preparation/jira_prepare_data.py' returned non-zero exit status 1.
+  File "/usr/local/lib/python3.9/dist-packages/bzt/cli.py", line 275, in perform
+    self.engine.prepare()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/engine/engine.py", line 219, in prepare
+    self.__prepare_services()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/engine/engine.py", line 680, in __prepare_services
+    module.prepare()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/modules/shellexec.py", line 103, in prepare
+    task.start()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/modules/shellexec.py", line 190, in start
+    self._get_results()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/modules/shellexec.py", line 217, in _get_results
+    raise CalledProcessError(self.process.returncode, self)
+[2022-04-29 23:04:38,339 INFO Engine] Post-processing...
+[2022-04-29 23:04:38,339 DEBUG Engine.consolidator] Consolidator buffer[0]: dict_keys([])
+[2022-04-29 23:04:38,339 INFO Engine.shellexec.Task] Starting shell command: python util/analytics/analytics.py jira
+[2022-04-29 23:04:38,340 DEBUG root] Executing shell: python util/analytics/analytics.py jira at /dc-app-performance-toolkit/app
+[2022-04-29 23:04:38,705 WARNING Engine.shellexec.Task] Errors for python util/analytics/analytics.py jira:
+Traceback (most recent call last):
+  File "/dc-app-performance-toolkit/app/util/analytics/analytics.py", line 212, in <module>
+    main()
+  File "/dc-app-performance-toolkit/app/util/analytics/analytics.py", line 205, in main
+    collector = AnalyticsCollector(application)
+  File "/dc-app-performance-toolkit/app/util/analytics/analytics.py", line 36, in __init__
+    self.results_log = ResultsFileReader()
+  File "/dc-app-performance-toolkit/app/util/analytics/log_reader.py", line 131, in __init__
+    self.results_log = self.get_results_log()
+  File "/dc-app-performance-toolkit/app/util/analytics/log_reader.py", line 135, in get_results_log
+    with open(self.results_log_path, 'r') as res_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/results.csv'
+
+[2022-04-29 23:04:38,705 DEBUG Engine.shellexec.Task] Task was finished with exit code 1: python util/analytics/analytics.py jira
+[2022-04-29 23:04:38,706 DEBUG Engine] post_process: Command 'python util/analytics/analytics.py jira' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/bzt/engine/engine.py", line 352, in post_process
+    module.post_process()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/modules/shellexec.py", line 132, in post_process
+    task.start()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/modules/shellexec.py", line 190, in start
+    self._get_results()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/modules/shellexec.py", line 217, in _get_results
+    raise CalledProcessError(self.process.returncode, self)
+subprocess.CalledProcessError: Command 'python util/analytics/analytics.py jira' returned non-zero exit status 1.
+
+[2022-04-29 23:04:38,707 DEBUG Engine.Configuration] Dumping YAML config into /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/effective.yml
+[2022-04-29 23:04:38,721 DEBUG Engine.Configuration] Dumping JSON config into /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/effective.json
+[2022-04-29 23:04:38,722 DEBUG root] CalledProcessError: Command 'python util/analytics/analytics.py jira' returned non-zero exit status 1.
+  File "/usr/local/lib/python3.9/dist-packages/bzt/cli.py", line 283, in perform
+    self.engine.post_process()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/engine/engine.py", line 366, in post_process
+    reraise(exc_info, exc_value)
+  File "/usr/local/lib/python3.9/dist-packages/bzt/utils.py", line 106, in reraise
+    raise exc
+  File "/usr/local/lib/python3.9/dist-packages/bzt/engine/engine.py", line 352, in post_process
+    module.post_process()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/modules/shellexec.py", line 132, in post_process
+    task.start()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/modules/shellexec.py", line 190, in start
+    self._get_results()
+  File "/usr/local/lib/python3.9/dist-packages/bzt/modules/shellexec.py", line 217, in _get_results
+    raise CalledProcessError(self.process.returncode, self)
+[2022-04-29 23:04:38,722 INFO root] Artifacts dir: /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32
+[2022-04-29 23:04:38,722 WARNING root] Done performing with code: 1
+[2022-04-29 23:04:38,722 DEBUG root] Closing log handler: /dc-app-performance-toolkit/app/results/jira/2022-04-29_23-04-32/bzt.log

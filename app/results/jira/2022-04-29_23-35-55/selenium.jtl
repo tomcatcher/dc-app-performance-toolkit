@@ -1,0 +1,64 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,success,bytes,grpThreads,allThreads,Latency,Hostname,Connect
+1651275382506,335,selenium_login:open_login_page,,Success,,True,0,0,0,0,,0
+1651275383319,812,selenium_login:login_and_view_dashboard,,Success,,True,0,0,0,0,,0
+1651275383319,1149,selenium_login,,Success,,True,0,0,0,0,,0
+1651275383695,358,selenium_browse_projects_list,,Success,,True,0,0,0,0,,0
+1651275424855,41158,selenium_browse_boards_list,,Failed measure: selenium_browse_boards_list - TimeoutException,,False,0,0,0,0,,0
+1651275426294,777,selenium_create_issue:open_quick_create,,Success,,True,0,0,0,0,,0
+1651275427543,585,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,,Success,,True,0,0,0,0,,0
+1651275427543,1249,selenium_create_issue:fill_and_submit_issue_form,,Success,,True,0,0,0,0,,0
+1651275427543,2026,selenium_create_issue,,Success,,True,0,0,0,0,,0
+1651275448849,431,selenium_edit_issue:open_edit_issue_form,,Success,,True,0,0,0,0,,0
+1651275450052,496,selenium_edit_issue:save_edit_issue_form,,Success,,True,0,0,0,0,,0
+1651275450052,1634,selenium_edit_issue,,Success,,True,0,0,0,0,,0
+1651275450436,382,selenium_save_comment:open_comment_form,,Success,,True,0,0,0,0,,0
+1651275451247,685,selenium_save_comment:submit_form,,Success,,True,0,0,0,0,,0
+1651275451247,1193,selenium_save_comment,,Success,,True,0,0,0,0,,0
+1651275453856,2607,selenium_search_jql,,Success,,True,0,0,0,0,,0
+1651275494802,40944,selenium_view_scrum_board_backlog,,Failed measure: selenium_view_scrum_board_backlog - TimeoutException,,False,0,0,0,0,,0
+1651275515699,20365,selenium_view_scrum_board,,Failed measure: selenium_view_scrum_board - TimeoutException,,False,0,0,0,0,,0
+1651275536594,20352,selenium_view_kanban_board,,Failed measure: selenium_view_kanban_board - TimeoutException,,False,0,0,0,0,,0
+1651275537412,249,selenium_view_dashboard,,Success,,True,0,0,0,0,,0
+1651275537968,554,selenium_view_issue,,Success,,True,0,0,0,0,,0
+1651275539298,1328,selenium_project_summary,,Success,,True,0,0,0,0,,0
+1651275539609,309,selenium_log_out,,Success,,True,0,0,0,0,,0
+1651275540164,477,selenium_login:open_login_page,,Success,,True,0,0,0,0,,0
+1651275543146,2981,selenium_login:login_and_view_dashboard,,Success,,True,0,0,0,0,,0
+1651275543146,3459,selenium_login,,Success,,True,0,0,0,0,,0
+1651275543803,639,selenium_browse_projects_list,,Success,,True,0,0,0,0,,0
+1651275546323,2518,selenium_browse_boards_list,,Success,,True,0,0,0,0,,0
+1651275547491,1152,selenium_create_issue:open_quick_create,,Success,,True,0,0,0,0,,0
+1651275548509,590,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,,Success,,True,0,0,0,0,,0
+1651275548510,1018,selenium_create_issue:fill_and_submit_issue_form,,Success,,True,0,0,0,0,,0
+1651275548510,2171,selenium_create_issue,,Success,,True,0,0,0,0,,0
+1651275551538,1101,selenium_edit_issue:open_edit_issue_form,,Success,,True,0,0,0,0,,0
+1651275552606,561,selenium_edit_issue:save_edit_issue_form,,Success,,True,0,0,0,0,,0
+1651275552606,2169,selenium_edit_issue,,Success,,True,0,0,0,0,,0
+1651275552968,360,selenium_save_comment:open_comment_form,,Success,,True,0,0,0,0,,0
+1651275554952,1882,selenium_save_comment:submit_form,,Success,,True,0,0,0,0,,0
+1651275554952,2344,selenium_save_comment,,Success,,True,0,0,0,0,,0
+1651275557948,2994,selenium_search_jql,,Success,,True,0,0,0,0,,0
+1651275562072,4122,selenium_view_scrum_board_backlog,,Success,,True,0,0,0,0,,0
+1651275565115,3042,selenium_view_scrum_board,,Success,,True,0,0,0,0,,0
+1651275565990,873,selenium_view_kanban_board,,Success,,True,0,0,0,0,,0
+1651275566319,326,selenium_view_dashboard,,Success,,True,0,0,0,0,,0
+1651275566912,591,selenium_view_issue,,Success,,True,0,0,0,0,,0
+1651275569178,2265,selenium_project_summary,,Success,,True,0,0,0,0,,0
+1651275569561,381,selenium_log_out,,Success,,True,0,0,0,0,,0
+1651275569771,133,selenium_login:open_login_page,,Success,,True,0,0,0,0,,0
+1651275570294,522,selenium_login:login_and_view_dashboard,,Success,,True,0,0,0,0,,0
+1651275570294,656,selenium_login,,Success,,True,0,0,0,0,,0
+1651275570563,250,selenium_browse_projects_list,,Success,,True,0,0,0,0,,0
+1651275611665,41101,selenium_browse_boards_list,,Failed measure: selenium_browse_boards_list - TimeoutException,,False,0,0,0,0,,0
+1651275612916,702,selenium_create_issue:open_quick_create,,Success,,True,0,0,0,0,,0
+1651275613993,587,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,,Success,,True,0,0,0,0,,0
+1651275613993,1076,selenium_create_issue:fill_and_submit_issue_form,,Success,,True,0,0,0,0,,0
+1651275613993,1779,selenium_create_issue,,Success,,True,0,0,0,0,,0
+1651275635317,474,selenium_edit_issue:open_edit_issue_form,,Success,,True,0,0,0,0,,0
+1651275636355,527,selenium_edit_issue:save_edit_issue_form,,Success,,True,0,0,0,0,,0
+1651275636355,1511,selenium_edit_issue,,Success,,True,0,0,0,0,,0
+1651275636781,424,selenium_save_comment:open_comment_form,,Success,,True,0,0,0,0,,0
+1651275637463,586,selenium_save_comment:submit_form,,Success,,True,0,0,0,0,,0
+1651275637463,1106,selenium_save_comment,,Success,,True,0,0,0,0,,0
+1651275638613,1148,selenium_search_jql,,Success,,True,0,0,0,0,,0
+1651275679990,41376,selenium_view_scrum_board_backlog,,Failed measure: selenium_view_scrum_board_backlog - TimeoutException,,False,0,0,0,0,,0

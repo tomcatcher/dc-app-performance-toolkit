@@ -1,0 +1,23 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,success,bytes,grpThreads,allThreads,Latency,Hostname,Connect
+1650780729538,493,selenium_login:open_login_page,,Success,,True,0,0,0,0,,0
+1650780731469,1930,selenium_login:login_and_view_dashboard,,Success,,True,0,0,0,0,,0
+1650780731469,2424,selenium_login,,Success,,True,0,0,0,0,,0
+1650780731747,243,selenium_browse_projects_list,,Success,,True,0,0,0,0,,0
+1650780732189,439,selenium_browse_boards_list,,Success,,True,0,0,0,0,,0
+1650780732802,598,selenium_create_issue:open_quick_create,,Success,,True,0,0,0,0,,0
+1650780733881,588,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,,Success,,True,0,0,0,0,,0
+1650780733881,1079,selenium_create_issue:fill_and_submit_issue_form,,Success,,True,0,0,0,0,,0
+1650780733881,1677,selenium_create_issue,,Success,,True,0,0,0,0,,0
+1650780755909,756,selenium_edit_issue:open_edit_issue_form,,Success,,True,0,0,0,0,,0
+1650780757571,1086,selenium_edit_issue:save_edit_issue_form,,Failed measure: selenium_edit_issue:save_edit_issue_form - ElementClickInterceptedException,,False,0,0,0,0,,0
+1650780757571,2418,selenium_edit_issue,,Failed measure: selenium_edit_issue - Exception,,False,0,0,0,0,,0
+1650780758336,285,selenium_save_comment:open_comment_form,,Success,,True,0,0,0,0,,0
+1650780759604,1084,selenium_save_comment:submit_form,,Failed measure: selenium_save_comment:submit_form - ElementClickInterceptedException,,False,0,0,0,0,,0
+1650780759604,1553,selenium_save_comment,,Failed measure: selenium_save_comment - Exception,,False,0,0,0,0,,0
+1650780761877,1833,selenium_search_jql,,Success,,True,0,0,0,0,,0
+1650780762788,909,selenium_view_scrum_board_backlog,,Success,,True,0,0,0,0,,0
+1650780763667,877,selenium_view_scrum_board,,Success,,True,0,0,0,0,,0
+1650780764350,681,selenium_view_kanban_board,,Success,,True,0,0,0,0,,0
+1650780764838,487,selenium_view_dashboard,,Success,,True,0,0,0,0,,0
+1650780765735,894,selenium_view_issue,,Success,,True,0,0,0,0,,0
+1650780766110,373,selenium_project_summary,,Success,,True,0,0,0,0,,0

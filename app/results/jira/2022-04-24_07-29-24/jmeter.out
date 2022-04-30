@@ -1,0 +1,6 @@
+Created the tree successfully using /dc-app-performance-toolkit/app/jmeter/modified_jira.jmx
+Starting standalone test @ Sun Apr 24 07:29:53 UTC 2022 (1650785393746)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+Command: Shutdown received from /127.0.0.1
+Tidying up ...    @ Sun Apr 24 07:29:54 UTC 2022 (1650785394379)
+... end of run

@@ -1,0 +1,45 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,success,bytes,grpThreads,allThreads,Latency,Hostname,Connect
+1650778252461,4070,selenium_login:open_login_page,,Success,,True,0,0,0,0,,0
+1650778256799,4337,selenium_login:login_and_view_dashboard,,Success,,True,0,0,0,0,,0
+1650778256799,8408,selenium_login,,Success,,True,0,0,0,0,,0
+1650778257473,657,selenium_browse_projects_list,,Success,,True,0,0,0,0,,0
+1650778261616,4141,selenium_browse_boards_list,,Success,,True,0,0,0,0,,0
+1650778262731,1099,selenium_create_issue:open_quick_create,,Success,,True,0,0,0,0,,0
+1650778263904,745,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,,Success,,True,0,0,0,0,,0
+1650778263904,1172,selenium_create_issue:fill_and_submit_issue_form,,Success,,True,0,0,0,0,,0
+1650778263904,2272,selenium_create_issue,,Success,,True,0,0,0,0,,0
+1650778286714,1768,selenium_edit_issue:open_edit_issue_form,,Success,,True,0,0,0,0,,0
+1650778288317,1085,selenium_edit_issue:save_edit_issue_form,,Failed measure: selenium_edit_issue:save_edit_issue_form - ElementClickInterceptedException,,False,0,0,0,0,,0
+1650778288317,3372,selenium_edit_issue,,Failed measure: selenium_edit_issue - Exception,,False,0,0,0,0,,0
+1650778289150,273,selenium_save_comment:open_comment_form,,Success,,True,0,0,0,0,,0
+1650778290884,1083,selenium_save_comment:submit_form,,Failed measure: selenium_save_comment:submit_form - ElementClickInterceptedException,,False,0,0,0,0,,0
+1650778290884,2007,selenium_save_comment,,Failed measure: selenium_save_comment - Exception,,False,0,0,0,0,,0
+1650778303075,11750,selenium_search_jql,,Success,,True,0,0,0,0,,0
+1650778308391,5315,selenium_view_scrum_board_backlog,,Success,,True,0,0,0,0,,0
+1650778312920,4528,selenium_view_scrum_board,,Success,,True,0,0,0,0,,0
+1650778313722,800,selenium_view_kanban_board,,Success,,True,0,0,0,0,,0
+1650778314095,371,selenium_view_dashboard,,Success,,True,0,0,0,0,,0
+1650778316305,2207,selenium_view_issue,,Success,,True,0,0,0,0,,0
+1650778319207,2900,selenium_project_summary,,Success,,True,0,0,0,0,,0
+1650778320457,1248,selenium_log_out,,Failed measure: selenium_log_out - ElementClickInterceptedException,,False,0,0,0,0,,0
+1650778321093,128,selenium_login:open_login_page,,Success,,True,0,0,0,0,,0
+1650778321595,501,selenium_login:login_and_view_dashboard,,Success,,True,0,0,0,0,,0
+1650778321595,630,selenium_login,,Success,,True,0,0,0,0,,0
+1650778321867,254,selenium_browse_projects_list,,Success,,True,0,0,0,0,,0
+1650778322229,360,selenium_browse_boards_list,,Success,,True,0,0,0,0,,0
+1650778323356,1103,selenium_create_issue:open_quick_create,,Failed measure: selenium_create_issue:open_quick_create - ElementClickInterceptedException,,False,0,0,0,0,,0
+1650778323356,1103,selenium_create_issue,,Failed measure: selenium_create_issue - Exception,,False,0,0,0,0,,0
+1650778326242,816,selenium_edit_issue:open_edit_issue_form,,Success,,True,0,0,0,0,,0
+1650778327795,1046,selenium_edit_issue:save_edit_issue_form,,Failed measure: selenium_edit_issue:save_edit_issue_form - ElementClickInterceptedException,,False,0,0,0,0,,0
+1650778327795,2369,selenium_edit_issue,,Failed measure: selenium_edit_issue - Exception,,False,0,0,0,0,,0
+1650778328698,469,selenium_save_comment:open_comment_form,,Success,,True,0,0,0,0,,0
+1650778329889,1086,selenium_save_comment:submit_form,,Failed measure: selenium_save_comment:submit_form - ElementClickInterceptedException,,False,0,0,0,0,,0
+1650778329889,1661,selenium_save_comment,,Failed measure: selenium_save_comment - Exception,,False,0,0,0,0,,0
+1650778331589,1260,selenium_search_jql,,Success,,True,0,0,0,0,,0
+1650778332463,873,selenium_view_scrum_board_backlog,,Success,,True,0,0,0,0,,0
+1650778333323,858,selenium_view_scrum_board,,Success,,True,0,0,0,0,,0
+1650778334238,913,selenium_view_kanban_board,,Success,,True,0,0,0,0,,0
+1650778334629,389,selenium_view_dashboard,,Success,,True,0,0,0,0,,0
+1650778337042,2411,selenium_view_issue,,Success,,True,0,0,0,0,,0
+1650778337577,533,selenium_project_summary,,Success,,True,0,0,0,0,,0
+1650778338829,1250,selenium_log_out,,Failed measure: selenium_log_out - ElementClickInterceptedException,,False,0,0,0,0,,0

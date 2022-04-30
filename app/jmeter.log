@@ -1,0 +1,22 @@
+2022-04-30 08:21:07,957 INFO o.j.r.PluginManagerCMD: Command is: install-for-jmx
+2022-04-30 08:21:07,998 INFO o.j.r.JARSourceHTTP: Found cached repo
+2022-04-30 08:21:08,195 INFO o.j.r.PluginManager: Plugins Status: [jpgc-functions=2.1, jpgc-casutg=2.5, jpgc-dummy=0.2, jpgc-filterresults=2.2, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-json=2.6, bzm-parallel=0.4, jpgc-prmctl=0.4, jpgc-perfmon=2.1, jpgc-plugins-manager=1.3, bzm-random-csv=0.6, tilln-sshmon=1.0, jpgc-synthesis=2.2, jpgc-tst=2.4, jpgc-wsc=0.3, jmeter-core=5.4.2, jmeter-ftp=5.4.2, jmeter-http=5.4.2, jmeter-jdbc=5.4.2, jmeter-jms=5.4.2, jmeter-junit=5.4.2, jmeter-java=5.4.2, jmeter-ldap=5.4.2, jmeter-mail=5.4.2, jmeter-mongodb=5.4.2, jmeter-native=5.4.2, jmeter-tcp=5.4.2, jmeter-components=5.4.2]
+2022-04-30 08:21:08,197 INFO o.j.r.PluginManagerCMD: Params line is: /dc-app-performance-toolkit/app/jmeter/modified_jira.jmx
+2022-04-30 08:21:08,234 WARN o.j.r.p.TestPlanAnalyzer: Cannot parse file: /dc-app-performance-toolkit/app/jmeter/modified_jira.jmx
+org.xml.sax.SAXParseException: An invalid XML character (Unicode: 0x98) was found in the element content of the document.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source) ~[xercesImpl-2.12.0.jar:?]
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source) ~[xercesImpl-2.12.0.jar:?]
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:122) ~[?:?]
+	at org.jmeterplugins.repository.plugins.TestPlanAnalyzer.getNodeListWithClassNames(TestPlanAnalyzer.java:104) [jmeter-plugins-manager-1.3.jar:?]
+	at org.jmeterplugins.repository.plugins.TestPlanAnalyzer.analyze(TestPlanAnalyzer.java:33) [jmeter-plugins-manager-1.3.jar:?]
+	at org.jmeterplugins.repository.plugins.PluginSuggester.analyzeTestPlan(PluginSuggester.java:51) [jmeter-plugins-manager-1.3.jar:?]
+	at org.jmeterplugins.repository.PluginManagerCMD.installPluginsForJmx(PluginManagerCMD.java:125) [jmeter-plugins-manager-1.3.jar:?]
+	at org.jmeterplugins.repository.PluginManagerCMD.processParams(PluginManagerCMD.java:79) [jmeter-plugins-manager-1.3.jar:?]
+	at kg.apc.cmdtools.PluginsCMD.processParams(PluginsCMD.java:62) [cmdrunner-2.2.jar:?]
+	at kg.apc.cmdtools.PluginsCMD.processParams(PluginsCMD.java:21) [cmdrunner-2.2.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at kg.apc.cmd.UniversalRunner.main(UniversalRunner.java:115) [cmdrunner-2.2.jar:?]
+2022-04-30 08:21:08,266 INFO o.j.r.PluginManager: Finishing without changes

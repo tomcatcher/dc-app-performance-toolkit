@@ -1,0 +1,628 @@
+04-30-2022, 03:35:06, 1651289706616, Action: test_1_selenium_browse_boards_list, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '205883', 'issue_key': 'AAFAIA-375', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_browse_boards_list(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.browse_boards_list(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:220: in browse_boards_list
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_browse_boards_list - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3aa61af0>. \nLocator: ('css selector', '#ghx-content-main table.aui')", None, None))
+
+selenium_ui/conftest.py:155: Exception
+04-30-2022, 03:35:29, 1651289729463, Action: test_1_selenium_quick_create, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '205883', 'issue_key': 'AAFAIA-375', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_quick_create(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.quick_create(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:125: in quick_create
+    quick_create_modal.quick_create_interaction()
+selenium_ui/jira/pages/pages.py:85: in quick_create_interaction
+    self.wait_until_visible(QuickCreateLocators.quick_create_button).click()
+selenium_ui/base_page.py:63: in wait_until_visible
+    return self.__wait_until(expected_condition=ec.visibility_of_element_located(selector), time_out=timeout)
+selenium_ui/base_page.py:112: in __wait_until
+    return WebDriverWait(self.driver, time_out).until(expected_condition, message=message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="5bcb8e3f7189132945780e23e153e779")>
+method = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a7635e0>
+message = "Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a7635e0>. \nLocator: ('id', 'quick-create-button-link')"
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+        return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() > end_time:
+                break
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a7635e0>. 
+E       Locator: ('id', 'quick-create-button-link')
+
+results/jira/2022-04-30_03-33-35/python-packages/3.9.5/selenium/webdriver/support/wait.py:80: TimeoutException
+04-30-2022, 03:36:17, 1651289777577, Action: test_1_selenium_view_backlog_for_scrum_board, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '205883', 'issue_key': 'AAFAIA-375', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_view_backlog_for_scrum_board(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.view_backlog_for_scrum_board(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:231: in view_backlog_for_scrum_board
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.presence_of_element_located object at 0x7fcd3a6b3cd0>. \nLocator: ('css selector', '#ghx-backlog[data-rendered]:not(.browser-metrics-stale)')", None, None))
+
+selenium_ui/conftest.py:155: Exception
+04-30-2022, 03:36:38, 1651289798476, Action: test_1_selenium_view_scrum_board, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '205883', 'issue_key': 'AAFAIA-375', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_view_scrum_board(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.view_scrum_board(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:241: in view_scrum_board
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_view_scrum_board - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a6cb820>. \nLocator: ('css selector', '.ghx-column')", None, None))
+
+selenium_ui/conftest.py:155: Exception
+04-30-2022, 03:36:59, 1651289819373, Action: test_1_selenium_view_kanban_board, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '205883', 'issue_key': 'AAFAIA-375', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_view_kanban_board(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.view_kanban_board(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:251: in view_kanban_board
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_view_kanban_board - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a761520>. \nLocator: ('css selector', '.ghx-column')", None, None))
+
+selenium_ui/conftest.py:155: Exception
+04-30-2022, 03:39:39, 1651289979826, Action: test_1_selenium_browse_boards_list, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '206231', 'issue_key': 'AAFAIA-723', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_browse_boards_list(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.browse_boards_list(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:220: in browse_boards_list
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_browse_boards_list - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a437a90>. \nLocator: ('css selector', '#ghx-content-main table.aui')", None, None))
+
+selenium_ui/conftest.py:155: Exception
+04-30-2022, 03:40:02, 1651290002527, Action: test_1_selenium_quick_create, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '206231', 'issue_key': 'AAFAIA-723', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_quick_create(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.quick_create(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:125: in quick_create
+    quick_create_modal.quick_create_interaction()
+selenium_ui/jira/pages/pages.py:85: in quick_create_interaction
+    self.wait_until_visible(QuickCreateLocators.quick_create_button).click()
+selenium_ui/base_page.py:63: in wait_until_visible
+    return self.__wait_until(expected_condition=ec.visibility_of_element_located(selector), time_out=timeout)
+selenium_ui/base_page.py:112: in __wait_until
+    return WebDriverWait(self.driver, time_out).until(expected_condition, message=message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="5bcb8e3f7189132945780e23e153e779")>
+method = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a472940>
+message = "Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a472940>. \nLocator: ('id', 'quick-create-button-link')"
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+        return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() > end_time:
+                break
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a472940>. 
+E       Locator: ('id', 'quick-create-button-link')
+
+results/jira/2022-04-30_03-33-35/python-packages/3.9.5/selenium/webdriver/support/wait.py:80: TimeoutException
+04-30-2022, 03:40:47, 1651290047731, Action: test_1_selenium_view_backlog_for_scrum_board, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '206231', 'issue_key': 'AAFAIA-723', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_view_backlog_for_scrum_board(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.view_backlog_for_scrum_board(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:231: in view_backlog_for_scrum_board
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.presence_of_element_located object at 0x7fcd3a3dc0a0>. \nLocator: ('css selector', '#ghx-backlog[data-rendered]:not(.browser-metrics-stale)')", None, None))
+
+selenium_ui/conftest.py:155: Exception
+04-30-2022, 03:41:50, 1651290110591, Action: test_1_selenium_view_scrum_board, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '206231', 'issue_key': 'AAFAIA-723', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_view_scrum_board(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.view_scrum_board(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:241: in view_scrum_board
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_view_scrum_board - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a37adf0>. \nLocator: ('css selector', '.ghx-column')", None, None))
+
+selenium_ui/conftest.py:155: Exception
+04-30-2022, 03:42:11, 1651290131534, Action: test_1_selenium_view_kanban_board, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '206231', 'issue_key': 'AAFAIA-723', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_view_kanban_board(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.view_kanban_board(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:251: in view_kanban_board
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_view_kanban_board - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a465850>. \nLocator: ('css selector', '.ghx-column')", None, None))
+
+selenium_ui/conftest.py:155: Exception
+04-30-2022, 03:42:56, 1651290176069, Action: test_1_selenium_browse_boards_list, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '209499', 'issue_key': 'AAFAIA-3991', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_browse_boards_list(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.browse_boards_list(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:220: in browse_boards_list
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_browse_boards_list - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a40d610>. \nLocator: ('css selector', '#ghx-content-main table.aui')", None, None))
+
+selenium_ui/conftest.py:155: Exception
+04-30-2022, 03:43:18, 1651290198701, Action: test_1_selenium_quick_create, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '209499', 'issue_key': 'AAFAIA-3991', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_quick_create(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.quick_create(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:125: in quick_create
+    quick_create_modal.quick_create_interaction()
+selenium_ui/jira/pages/pages.py:85: in quick_create_interaction
+    self.wait_until_visible(QuickCreateLocators.quick_create_button).click()
+selenium_ui/base_page.py:63: in wait_until_visible
+    return self.__wait_until(expected_condition=ec.visibility_of_element_located(selector), time_out=timeout)
+selenium_ui/base_page.py:112: in __wait_until
+    return WebDriverWait(self.driver, time_out).until(expected_condition, message=message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="5bcb8e3f7189132945780e23e153e779")>
+method = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a37bf70>
+message = "Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a37bf70>. \nLocator: ('id', 'quick-create-button-link')"
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+        return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() > end_time:
+                break
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a37bf70>. 
+E       Locator: ('id', 'quick-create-button-link')
+
+results/jira/2022-04-30_03-33-35/python-packages/3.9.5/selenium/webdriver/support/wait.py:80: TimeoutException
+04-30-2022, 03:44:04, 1651290244875, Action: test_1_selenium_view_backlog_for_scrum_board, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5bcb8e3f7189132945780e23e153e779")>
+jira_datasets = {'custom_issues': [], 'issue_id': '209499', 'issue_key': 'AAFAIA-3991', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_view_backlog_for_scrum_board(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.view_backlog_for_scrum_board(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:231: in view_backlog_for_scrum_board
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @functools.wraps(func)
+    def wrapper():
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip(f"login is failed")
+        start = time.time()
+        error_msg = 'Success'
+        full_exception = ''
+        try:
+            func()
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time.time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time.time() * 1000)
+                jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg},,{success},0,0,0,0,,0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for <selenium.webdriver.support.expected_conditions.presence_of_element_located object at 0x7fcd3a402730>. \nLocator: ('css selector', '#ghx-backlog[data-rendered]:not(.browser-metrics-stale)')", None, None))
+
+selenium_ui/conftest.py:155: Exception

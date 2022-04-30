@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="sample_labels" package_name="bzt">
+    <testcase classname="bzt-8770078935119" name="jmeter_add_comment:open_comment"/>
+    <testcase classname="bzt-8770078935119" name="jmeter_add_comment:save_comment">
+      <error message="Number of samples in transaction : 8, number of failing samples : 1" type="Error">Number of samples in transaction : 8, number of failing samples : 1
+(status code is 404)
+(total errors of this type: 47)</error>
+    </testcase>
+    <testcase classname="bzt-8770078935119" name="jmeter_browse_boards">
+      <error message="Number of samples in transaction : 5, number of failing samples : 2" type="Error">Number of samples in transaction : 5, number of failing samples : 2
+(status code is 404)
+(total errors of this type: 15)</error>
+    </testcase>
+    <testcase classname="bzt-8770078935119" name="jmeter_browse_projects"/>
+    <testcase classname="bzt-8770078935119" name="jmeter_create_issue:fill_and_submit_issue_form"/>
+    <testcase classname="bzt-8770078935119" name="jmeter_create_issue:open_quick_create"/>
+    <testcase classname="bzt-8770078935119" name="jmeter_edit_issue:open_editor"/>
+    <testcase classname="bzt-8770078935119" name="jmeter_edit_issue:save_edit">
+      <error message="Number of samples in transaction : 9, number of failing samples : 1" type="Error">Number of samples in transaction : 9, number of failing samples : 1
+(status code is 404)
+(total errors of this type: 94)</error>
+    </testcase>
+    <testcase classname="bzt-8770078935119" name="jmeter_login_and_view_dashboard"/>
+    <testcase classname="bzt-8770078935119" name="jmeter_search_jql"/>
+    <testcase classname="bzt-8770078935119" name="jmeter_view_backlog">
+      <error message="Number of samples in transaction : 7, number of failing samples : 5" type="Error">Number of samples in transaction : 7, number of failing samples : 5
+(status code is 404)
+(total errors of this type: 128)</error>
+    </testcase>
+    <testcase classname="bzt-8770078935119" name="jmeter_view_dashboard"/>
+    <testcase classname="bzt-8770078935119" name="jmeter_view_issue"/>
+    <testcase classname="bzt-8770078935119" name="jmeter_view_kanban_board">
+      <error message="Number of samples in transaction : 10, number of failing samples : 6" type="Error">Number of samples in transaction : 10, number of failing samples : 6
+(status code is 404)
+(total errors of this type: 165)</error>
+    </testcase>
+    <testcase classname="bzt-8770078935119" name="jmeter_view_project_summary"/>
+    <testcase classname="bzt-8770078935119" name="jmeter_view_scrum_board">
+      <error message="Number of samples in transaction : 9, number of failing samples : 4" type="Error">Number of samples in transaction : 9, number of failing samples : 4
+(status code is 404)
+(total errors of this type: 139)</error>
+    </testcase>
+    <testcase classname="bzt-8770078935119" name="selenium_a_login"/>
+    <testcase classname="bzt-8770078935119" name="selenium_browse_boards_list">
+      <error message="Exception: ('Failed measure: selenium_browse_boards_list - TimeoutException', TimeoutException(&quot;Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3aa61af0&gt;. \nLocator: ('css selector', '#ghx-content-main table.aui')&quot;, None, None))" type="Error">Exception: ('Failed measure: selenium_browse_boards_list - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3aa61af0&gt;. \nLocator: ('css selector', '#ghx-content-main table.aui')", None, None))
+(status code is 400)
+(total errors of this type: 1)</error>
+      <error message="Exception: ('Failed measure: selenium_browse_boards_list - TimeoutException', TimeoutException(&quot;Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a437a90&gt;. \nLocator: ('css selector', '#ghx-content-main table.aui')&quot;, None, None))" type="Error">Exception: ('Failed measure: selenium_browse_boards_list - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a437a90&gt;. \nLocator: ('css selector', '#ghx-content-main table.aui')", None, None))
+(status code is 400)
+(total errors of this type: 1)</error>
+      <error message="Exception: ('Failed measure: selenium_browse_boards_list - TimeoutException', TimeoutException(&quot;Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a40d610&gt;. \nLocator: ('css selector', '#ghx-content-main table.aui')&quot;, None, None))" type="Error">Exception: ('Failed measure: selenium_browse_boards_list - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a40d610&gt;. \nLocator: ('css selector', '#ghx-content-main table.aui')", None, None))
+(status code is 400)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8770078935119" name="selenium_browse_projects_list"/>
+    <testcase classname="bzt-8770078935119" name="selenium_create_issue"/>
+    <testcase classname="bzt-8770078935119" name="selenium_edit_issue"/>
+    <testcase classname="bzt-8770078935119" name="selenium_quick_create">
+      <error message="selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a7635e0&gt;. &#10;Locator: ('id', 'quick-create-button-link')" type="Error">selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a7635e0&gt;. 
+Locator: ('id', 'quick-create-button-link')
+(status code is 400)
+(total errors of this type: 1)</error>
+      <error message="selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a472940&gt;. &#10;Locator: ('id', 'quick-create-button-link')" type="Error">selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a472940&gt;. 
+Locator: ('id', 'quick-create-button-link')
+(status code is 400)
+(total errors of this type: 1)</error>
+      <error message="selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a37bf70&gt;. &#10;Locator: ('id', 'quick-create-button-link')" type="Error">selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a37bf70&gt;. 
+Locator: ('id', 'quick-create-button-link')
+(status code is 400)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8770078935119" name="selenium_save_comment"/>
+    <testcase classname="bzt-8770078935119" name="selenium_search_jql"/>
+    <testcase classname="bzt-8770078935119" name="selenium_view_backlog_for_scrum_board">
+      <error message="Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException(&quot;Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.presence_of_element_located object at 0x7fcd3a6b3cd0&gt;. \nLocator: ('css selector', '#ghx-backlog[data-rendered]:not(.browser-metrics-stale)')&quot;, None, None))" type="Error">Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.presence_of_element_located object at 0x7fcd3a6b3cd0&gt;. \nLocator: ('css selector', '#ghx-backlog[data-rendered]:not(.browser-metrics-stale)')", None, None))
+(status code is 400)
+(total errors of this type: 1)</error>
+      <error message="Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException(&quot;Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.presence_of_element_located object at 0x7fcd3a3dc0a0&gt;. \nLocator: ('css selector', '#ghx-backlog[data-rendered]:not(.browser-metrics-stale)')&quot;, None, None))" type="Error">Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.presence_of_element_located object at 0x7fcd3a3dc0a0&gt;. \nLocator: ('css selector', '#ghx-backlog[data-rendered]:not(.browser-metrics-stale)')", None, None))
+(status code is 400)
+(total errors of this type: 1)</error>
+      <error message="Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException(&quot;Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.presence_of_element_located object at 0x7fcd3a402730&gt;. \nLocator: ('css selector', '#ghx-backlog[data-rendered]:not(.browser-metrics-stale)')&quot;, None, None))" type="Error">Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.presence_of_element_located object at 0x7fcd3a402730&gt;. \nLocator: ('css selector', '#ghx-backlog[data-rendered]:not(.browser-metrics-stale)')", None, None))
+(status code is 400)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8770078935119" name="selenium_view_dashboard"/>
+    <testcase classname="bzt-8770078935119" name="selenium_view_issue"/>
+    <testcase classname="bzt-8770078935119" name="selenium_view_kanban_board">
+      <error message="Exception: ('Failed measure: selenium_view_kanban_board - TimeoutException', TimeoutException(&quot;Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a761520&gt;. \nLocator: ('css selector', '.ghx-column')&quot;, None, None))" type="Error">Exception: ('Failed measure: selenium_view_kanban_board - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a761520&gt;. \nLocator: ('css selector', '.ghx-column')", None, None))
+(status code is 400)
+(total errors of this type: 1)</error>
+      <error message="Exception: ('Failed measure: selenium_view_kanban_board - TimeoutException', TimeoutException(&quot;Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a465850&gt;. \nLocator: ('css selector', '.ghx-column')&quot;, None, None))" type="Error">Exception: ('Failed measure: selenium_view_kanban_board - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a465850&gt;. \nLocator: ('css selector', '.ghx-column')", None, None))
+(status code is 400)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8770078935119" name="selenium_view_project_summary"/>
+    <testcase classname="bzt-8770078935119" name="selenium_view_scrum_board">
+      <error message="Exception: ('Failed measure: selenium_view_scrum_board - TimeoutException', TimeoutException(&quot;Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a6cb820&gt;. \nLocator: ('css selector', '.ghx-column')&quot;, None, None))" type="Error">Exception: ('Failed measure: selenium_view_scrum_board - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a6cb820&gt;. \nLocator: ('css selector', '.ghx-column')", None, None))
+(status code is 400)
+(total errors of this type: 1)</error>
+      <error message="Exception: ('Failed measure: selenium_view_scrum_board - TimeoutException', TimeoutException(&quot;Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a37adf0&gt;. \nLocator: ('css selector', '.ghx-column')&quot;, None, None))" type="Error">Exception: ('Failed measure: selenium_view_scrum_board - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fcd3a37adf0&gt;. \nLocator: ('css selector', '.ghx-column')", None, None))
+(status code is 400)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8770078935119" name="selenium_z_log_out"/>
+  </testsuite>
+</testsuites>

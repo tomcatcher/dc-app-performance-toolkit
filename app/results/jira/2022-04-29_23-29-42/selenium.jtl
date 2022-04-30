@@ -1,0 +1,17 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,success,bytes,grpThreads,allThreads,Latency,Hostname,Connect
+1651275013704,496,selenium_login:open_login_page,,Success,,True,0,0,0,0,,0
+1651275014609,904,selenium_login:login_and_view_dashboard,,Success,,True,0,0,0,0,,0
+1651275014609,1401,selenium_login,,Success,,True,0,0,0,0,,0
+1651275015055,425,selenium_browse_projects_list,,Success,,True,0,0,0,0,,0
+1651275056416,41360,selenium_browse_boards_list,,Failed measure: selenium_browse_boards_list - TimeoutException,,False,0,0,0,0,,0
+1651275057976,865,selenium_create_issue:open_quick_create,,Success,,True,0,0,0,0,,0
+1651275059073,584,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,,Success,,True,0,0,0,0,,0
+1651275059073,1096,selenium_create_issue:fill_and_submit_issue_form,,Success,,True,0,0,0,0,,0
+1651275059073,1962,selenium_create_issue,,Success,,True,0,0,0,0,,0
+1651275081083,1169,selenium_edit_issue:open_edit_issue_form,,Success,,True,0,0,0,0,,0
+1651275082332,587,selenium_edit_issue:save_edit_issue_form,,Success,,True,0,0,0,0,,0
+1651275082332,2418,selenium_edit_issue,,Success,,True,0,0,0,0,,0
+1651275082666,332,selenium_save_comment:open_comment_form,,Success,,True,0,0,0,0,,0
+1651275084652,1812,selenium_save_comment:submit_form,,Success,,True,0,0,0,0,,0
+1651275084652,2318,selenium_save_comment,,Success,,True,0,0,0,0,,0
+1651275086997,2343,selenium_search_jql,,Success,,True,0,0,0,0,,0

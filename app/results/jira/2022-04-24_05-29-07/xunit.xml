@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="sample_labels" package_name="bzt">
+    <testcase classname="bzt-8787934003044" name="jmeter_add_comment:open_comment"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_add_comment:save_comment"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_browse_boards"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_browse_projects"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_create_issue:fill_and_submit_issue_form"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_create_issue:open_quick_create"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_edit_issue:open_editor"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_edit_issue:save_edit"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_login_and_view_dashboard"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_search_jql"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_view_backlog"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_view_dashboard"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_view_issue"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_view_kanban_board"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_view_project_summary"/>
+    <testcase classname="bzt-8787934003044" name="jmeter_view_scrum_board"/>
+    <testcase classname="bzt-8787934003044" name="selenium_a_login"/>
+    <testcase classname="bzt-8787934003044" name="selenium_browse_boards_list"/>
+    <testcase classname="bzt-8787934003044" name="selenium_browse_projects_list"/>
+    <testcase classname="bzt-8787934003044" name="selenium_create_issue">
+      <error message="Exception: ('Failed measure: selenium_create_issue - Exception', Exception('Failed measure: selenium_create_issue:open_quick_create - ElementClickInterceptedException', ElementClickInterceptedException('element click intercepted: Element &lt;a id=&quot;create_link&quot; class=&quot;aui-button aui-button-primary aui-style create-issue qc-button-top-nav-bar-common&quot; title=&quot;... a new issue / bug / feature request / etc&quot; href=&quot;/secure/CreateIssue!default.jspa&quot; accesskey=&quot;c&quot; resolved=&quot;&quot;&gt;Create&lt;/a&gt; is not clickable at point (666, 20). Other element would receive the click: &lt;div class=&quot;-ixperta-atlassian-modal-dialog_screen__1C4Hi&quot; style=&quot;z-index: 10000;&quot;&gt;&lt;/div&gt;\n  (Session info: headless chrome=97.0.4692.99)', None, None)))" type="Error">Exception: ('Failed measure: selenium_create_issue - Exception', Exception('Failed measure: selenium_create_issue:open_quick_create - ElementClickInterceptedException', ElementClickInterceptedException('element click intercepted: Element &lt;a id="create_link" class="aui-button aui-button-primary aui-style create-issue qc-button-top-nav-bar-common" title="... a new issue / bug / feature request / etc" href="/secure/CreateIssue!default.jspa" accesskey="c" resolved=""&gt;Create&lt;/a&gt; is not clickable at point (666, 20). Other element would receive the click: &lt;div class="-ixperta-atlassian-modal-dialog_screen__1C4Hi" style="z-index: 10000;"&gt;&lt;/div&gt;\n  (Session info: headless chrome=97.0.4692.99)', None, None)))
+(status code is 400)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8787934003044" name="selenium_edit_issue">
+      <error message="Exception: ('Failed measure: selenium_edit_issue - Exception', Exception('Failed measure: selenium_edit_issue:save_edit_issue_form - ElementClickInterceptedException', ElementClickInterceptedException('element click intercepted: Element &lt;input accesskey=&quot;s&quot; class=&quot;aui-button&quot; id=&quot;issue-edit-submit&quot; name=&quot;Update&quot; title=&quot;Press Alt+s to submit this form&quot; type=&quot;submit&quot; value=&quot;Update&quot; resolved=&quot;&quot;&gt; is not clickable at point (198, 1065). Other element would receive the click: &lt;div class=&quot;-ixperta-atlassian-modal-dialog_screen__1C4Hi&quot; style=&quot;z-index: 10000;&quot;&gt;&lt;/div&gt;\n  (Session info: headless chrome=97.0.4692.99)', None, None)))" type="Error">Exception: ('Failed measure: selenium_edit_issue - Exception', Exception('Failed measure: selenium_edit_issue:save_edit_issue_form - ElementClickInterceptedException', ElementClickInterceptedException('element click intercepted: Element &lt;input accesskey="s" class="aui-button" id="issue-edit-submit" name="Update" title="Press Alt+s to submit this form" type="submit" value="Update" resolved=""&gt; is not clickable at point (198, 1065). Other element would receive the click: &lt;div class="-ixperta-atlassian-modal-dialog_screen__1C4Hi" style="z-index: 10000;"&gt;&lt;/div&gt;\n  (Session info: headless chrome=97.0.4692.99)', None, None)))
+(status code is 400)
+(total errors of this type: 2)</error>
+    </testcase>
+    <testcase classname="bzt-8787934003044" name="selenium_quick_create">
+      <error message="selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fd59ec80d00&gt;. &#10;Locator: ('xpath', '/html/body/div[9]/div/div/div/div[2]/div/div[2]/div/div/ul/li/div/a/img')" type="Error">selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7fd59ec80d00&gt;. 
+Locator: ('xpath', '/html/body/div[9]/div/div/div/div[2]/div/div[2]/div/div/ul/li/div/a/img')
+(status code is 400)
+(total errors of this type: 1)</error>
+      <error message="selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href=&quot;#&quot; class=&quot;aui-button aui-button-primary aui-style create-issue qc-create-button qc-button-top-nav-bar-common&quot; id=&quot;quick-create-button-link&quot; resolved=&quot;&quot;&gt;...&lt;/a&gt; is not clickable at point (763, 20). Other element would receive the click: &lt;div class=&quot;-ixperta-atlassian-modal-dialog_screen__1C4Hi&quot; style=&quot;z-index: 10000;&quot;&gt;&lt;/div&gt;&#10;  (Session info: headless chrome=97.0.4692.99)" type="Error">selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="#" class="aui-button aui-button-primary aui-style create-issue qc-create-button qc-button-top-nav-bar-common" id="quick-create-button-link" resolved=""&gt;...&lt;/a&gt; is not clickable at point (763, 20). Other element would receive the click: &lt;div class="-ixperta-atlassian-modal-dialog_screen__1C4Hi" style="z-index: 10000;"&gt;&lt;/div&gt;
+  (Session info: headless chrome=97.0.4692.99)
+(status code is 400)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8787934003044" name="selenium_save_comment">
+      <error message="Exception: ('Failed measure: selenium_save_comment - Exception', Exception('Failed measure: selenium_save_comment:submit_form - ElementClickInterceptedException', ElementClickInterceptedException('element click intercepted: Element &lt;input accesskey=&quot;s&quot; class=&quot;aui-button&quot; id=&quot;comment-add-submit&quot; name=&quot;Add&quot; title=&quot;Press Alt+s to submit this form&quot; type=&quot;submit&quot; value=&quot;Add&quot; resolved=&quot;&quot;&gt; is not clickable at point (188, 467). Other element would receive the click: &lt;div class=&quot;-ixperta-atlassian-modal-dialog_screen__1C4Hi&quot; style=&quot;z-index: 10000;&quot;&gt;&lt;/div&gt;\n  (Session info: headless chrome=97.0.4692.99)', None, None)))" type="Error">Exception: ('Failed measure: selenium_save_comment - Exception', Exception('Failed measure: selenium_save_comment:submit_form - ElementClickInterceptedException', ElementClickInterceptedException('element click intercepted: Element &lt;input accesskey="s" class="aui-button" id="comment-add-submit" name="Add" title="Press Alt+s to submit this form" type="submit" value="Add" resolved=""&gt; is not clickable at point (188, 467). Other element would receive the click: &lt;div class="-ixperta-atlassian-modal-dialog_screen__1C4Hi" style="z-index: 10000;"&gt;&lt;/div&gt;\n  (Session info: headless chrome=97.0.4692.99)', None, None)))
+(status code is 400)
+(total errors of this type: 2)</error>
+    </testcase>
+    <testcase classname="bzt-8787934003044" name="selenium_search_jql"/>
+    <testcase classname="bzt-8787934003044" name="selenium_view_backlog_for_scrum_board"/>
+    <testcase classname="bzt-8787934003044" name="selenium_view_dashboard"/>
+    <testcase classname="bzt-8787934003044" name="selenium_view_issue"/>
+    <testcase classname="bzt-8787934003044" name="selenium_view_kanban_board"/>
+    <testcase classname="bzt-8787934003044" name="selenium_view_project_summary"/>
+    <testcase classname="bzt-8787934003044" name="selenium_view_scrum_board"/>
+    <testcase classname="bzt-8787934003044" name="selenium_z_log_out">
+      <error message="Exception: ('Failed measure: selenium_log_out - ElementClickInterceptedException', ElementClickInterceptedException('element click intercepted: Element &lt;input id=&quot;confirm-logout-submit&quot; name=&quot;Logout&quot; type=&quot;submit&quot; class=&quot;aui-button aui-button-primary&quot; value=&quot;Log Out&quot; resolved=&quot;&quot;&gt; is not clickable at point (743, 261). Other element would receive the click: &lt;li class=&quot;qc-overlay__2aDki8D-j9g4F7Yv-_7_lU&quot;&gt;...&lt;/li&gt;\n  (Session info: headless chrome=97.0.4692.99)', None, None))" type="Error">Exception: ('Failed measure: selenium_log_out - ElementClickInterceptedException', ElementClickInterceptedException('element click intercepted: Element &lt;input id="confirm-logout-submit" name="Logout" type="submit" class="aui-button aui-button-primary" value="Log Out" resolved=""&gt; is not clickable at point (743, 261). Other element would receive the click: &lt;li class="qc-overlay__2aDki8D-j9g4F7Yv-_7_lU"&gt;...&lt;/li&gt;\n  (Session info: headless chrome=97.0.4692.99)', None, None))
+(status code is 400)
+(total errors of this type: 1)</error>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,29 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: forked-1.4.0, xdist-2.5.0, apiritif-1.0.0
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+___________________ ERROR collecting selenium_ui/jira_ui.py ____________________
+selenium_ui/jira_ui.py:1: in <module>
+    from selenium_ui.jira import modules
+selenium_ui/jira/modules.py:5: in <module>
+    from selenium_ui.jira.pages.pages import Login, PopupManager, Issue, QuickCreate, Project, Search, ProjectsList, \
+selenium_ui/jira/pages/pages.py:8: in <module>
+    from selenium_ui.jira.pages.selectors import UrlManager, LoginPageLocators, DashboardLocators, PopupLocators, \
+selenium_ui/jira/pages/selectors.py:96: in <module>
+    class QuickCreateLocators:
+selenium_ui/jira/pages/selectors.py:99: in QuickCreateLocators
+    category1 = (By.CLASS, "qc-overlay__3Yii7WSiOUSqVL-byS5kj9")
+E   AttributeError: type object 'By' has no attribute 'CLASS'
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.9.5/_pytest/config/__init__.py:1114
+  /root/.bzt/python-packages/3.9.5/_pytest/config/__init__.py:1114: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+=========================== short test summary info ============================
+ERROR selenium_ui/jira_ui.py - AttributeError: type object 'By' has no attrib...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+========================= 1 warning, 1 error in 0.07s ==========================
